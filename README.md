@@ -14,13 +14,13 @@ primarily empty methods, a few commented suggestions).
 ## Phase 1: IntSet
 ### ToDo
 - [] Rewatch IntSet sections: write notes
-- [] Write MaxIntSet
+- [X] Write MaxIntSet
 - [] Write IntSet
 - [] Write ResizingIntSet
 - [] Refactor code
 - [] Finish README notes
 #### MaxIntSet
-A set that can only store integers within a given range. 
+Given the max size of the input, this set stores integers between zero and the max. 
 Built on an array, where each value is either 'true' or 'false' and the index
 corresponds to the given value.
 Insert: O(1)
@@ -28,6 +28,8 @@ Delete: O(1)
 Lookup: O(1)
 Space Complexity: Relies on user inputting the maximum allowed value, at best could
 be O(n), but if there are large gaps between numbers, it could be much worse.
+#### IntSet
+
 ## Phase 2: Hashing
 ## Phase 3: HashSet
 ## Phase 4: Linked List
