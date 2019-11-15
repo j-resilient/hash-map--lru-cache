@@ -28,3 +28,7 @@ corresponds to the given value.
 ## Phase 4: Linked List
 ## Phase 5: Hash Map (reprise)
 ## Phase 6: LRU Cache
+
+# ToDo
+- [] Remove all attraccessors and make note in README that they're necessary to pass 
+the tests
