@@ -15,7 +15,7 @@ primarily empty methods, a few commented suggestions).
 ### ToDo
 - [] Rewatch IntSet sections: write notes
 - [X] Write MaxIntSet
-- [] Write IntSet
+- [X] Write IntSet
 - [] Write ResizingIntSet
 - [] Refactor code
 - [] Finish README notes
@@ -29,7 +29,12 @@ Lookup: O(1)
 Space Complexity: Relies on user inputting the maximum allowed value, at best could
 be O(n), but if there are large gaps between numbers, it could be much worse.
 #### IntSet
-
+A set built on an array with a fixed size of 20. Each element is moduloed by 20
+and then stored in a subarray at the resulting index.
+Insert: O(n)
+Delete: O(n)
+Lookup: O(n)
+Space complexity: O(1)
 ## Phase 2: Hashing
 ## Phase 3: HashSet
 ## Phase 4: Linked List
