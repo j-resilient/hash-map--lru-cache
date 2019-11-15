@@ -12,13 +12,6 @@
 For each section I was given prewritten RSPEC specs and a skeleton (class layout - 
 primarily empty methods, a few commented suggestions).
 ## Phase 1: IntSet
-### ToDo
-- [] Rewatch IntSet sections: write notes
-- [X] Write MaxIntSet
-- [X] Write IntSet
-- [] Write ResizingIntSet
-- [] Refactor code
-- [] Finish README notes
 #### MaxIntSet
 Given the max size of the input, this set stores integers between zero and the max. 
 Built on an array, where each value is either 'true' or 'false' and the index
@@ -35,6 +28,13 @@ Insert: O(n)
 Delete: O(n)
 Lookup: O(n)
 Space complexity: O(1)
+#### ResizingIntSet
+Like IntSet except we keep resizing the array to keep the array size larger than the input.
+Every time we resize the array, we have to move every element in the set to its new subarray (element % array.length).
+To keep insertion O(1) (amortized), we double the size of the array every time we resize it.
+Insert: O(1)
+Delete: O(1)
+Lookup: O(1)
 ## Phase 2: Hashing
 ## Phase 3: HashSet
 ## Phase 4: Linked List
