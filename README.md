@@ -19,6 +19,10 @@ primarily empty methods, a few commented suggestions).
 - [] Write ResizingIntSet
 - [] Refactor code
 - [] Finish README notes
+#### MaxIntSet
+A set that can only store integers within a given range. 
+Built on an array, where each value is either 'true' or 'false' and the index
+corresponds to the given value.
 ## Phase 2: Hashing
 ## Phase 3: HashSet
 ## Phase 4: Linked List
