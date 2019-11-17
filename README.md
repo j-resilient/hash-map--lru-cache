@@ -15,10 +15,10 @@ primarily empty methods, a few commented suggestions).
 #### MaxIntSet
 Given the max size of the input, this set stores integers between zero and the max. 
 Built on an array, where each value is either 'true' or 'false' and the index
-corresponds to the given value.
-Insert: O(1)
-Delete: O(1)
-Lookup: O(1)
+corresponds to the given value.  
+Insert: O(1)  
+Delete: O(1)  
+Lookup: O(1)  
 Space Complexity: Relies on user inputting the maximum allowed value, at best could
 be O(n), but if there are large gaps between numbers, it could be much worse.
 #### IntSet
@@ -31,9 +31,9 @@ Space complexity: O(1)
 #### ResizingIntSet
 Like IntSet except we keep resizing the array to keep the array size larger than the input.
 Every time we resize the array, we have to move every element in the set to its new subarray (element % array.length).
-To keep insertion O(1) (amortized), we double the size of the array every time we resize it.
-Insert: O(1)
-Delete: O(1)
+To keep insertion O(1) (amortized), we double the size of the array every time we resize it.  
+Insert: O(1)  
+Delete: O(1)  
 Lookup: O(1)
 ## Phase 2: Hashing
 ## Phase 3: HashSet
@@ -42,5 +42,5 @@ Lookup: O(1)
 ## Phase 6: LRU Cache
 
 # ToDo
-- [] Remove all attraccessors and make note in README that they're necessary to pass 
+-[] Remove all attraccessors and make note in README that they're necessary to pass 
 the tests
