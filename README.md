@@ -23,10 +23,10 @@ Space Complexity: Relies on user inputting the maximum allowed value, at best co
 be O(n), but if there are large gaps between numbers, it could be much worse.
 #### IntSet
 A set built on an array with a fixed size of 20. Each element is moduloed by 20
-and then stored in a subarray at the resulting index.
-Insert: O(n)
-Delete: O(n)
-Lookup: O(n)
+and then stored in a subarray at the resulting index.  
+Insert: O(n)  
+Delete: O(n)  
+Lookup: O(n)  
 Space complexity: O(1)
 #### ResizingIntSet
 Like IntSet except we keep resizing the array to keep the array size larger than the input.
