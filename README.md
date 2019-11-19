@@ -22,8 +22,8 @@ Lookup: O(1)
 Space Complexity: Relies on user inputting the maximum allowed value, at best could
 be O(n), but if there are large gaps between numbers, it could be much worse.
 #### IntSet
-A set built on an array with a fixed size of 20. Each element is moduloed by 20
-and then stored in a subarray at the resulting index.  
+A set built on an array with a fixed size of 20. Still only accepts integers.
+Each element is moduloed by 20 and then stored in a subarray at the resulting index.  
 Insert: O(n)  
 Delete: O(n)  
 Lookup: O(n)  
@@ -38,9 +38,10 @@ Lookup: O(1)
 ## Phase 2: Hashing
 Simple overridden hash functions for Array, String, and Hash. All of the
 functions are built on top of Integer#hash.
-### String#hash
-### Hash#hash
 ## Phase 3: HashSet
+Improves on ResizingIntSet by hashing each item before storing it in a subarray,
+which means the elements are much less likely to cluster in any one subarray.
+Since ruby's native hashing returns an integer, HashSet can accept elements of any type.
 ## Phase 4: Linked List
 ## Phase 5: Hash Map (reprise)
 ## Phase 6: LRU Cache
