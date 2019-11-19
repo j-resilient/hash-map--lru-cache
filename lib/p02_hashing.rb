@@ -4,12 +4,9 @@ end
 
 class Array
   def hash
-    hash = 0
-    self.each_with_index do |el, idx|
-      el_hash = el.hash + idx.hash
-      hash = hash.nil? ? el_hash : (hash ^ el_hash)
+    each_with_index.inject(0) do |hash_acc, (el, idx)|
+      hash_acc ^ (el.hash + idx.hash)
     end
-    hash
   end
 end
 
