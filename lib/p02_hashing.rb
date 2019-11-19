@@ -4,17 +4,18 @@ end
 
 class Array
   def hash
-    hash = nil
+    hash = 0
     self.each_with_index do |el, idx|
-      el_hash = el.hash ^ idx.hash
-      hash = hash.nil? ? el_hash : (el.hash ^ hash ^ el_hash)
+      el_hash = el.hash + idx.hash
+      hash = hash.nil? ? el_hash : (hash ^ el_hash)
     end
-    hash.hash
+    hash
   end
 end
 
 class String
   def hash
+    self.split("").map(&:ord).hash
   end
 end
 
