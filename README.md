@@ -36,6 +36,13 @@ Insert: O(1)
 Delete: O(1)
 Lookup: O(1)
 ## Phase 2: Hashing
+Overriding hash functions for Array, String, and Hash. All of the
+functions are built on top of Integer#hash.
+### Array#hash
+Hashes an array to an integer. Arrays with the same elements in different
+orders hash to different values.
+### String#hash
+### Hash#hash
 ## Phase 3: HashSet
 ## Phase 4: Linked List
 ## Phase 5: Hash Map (reprise)

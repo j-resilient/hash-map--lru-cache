@@ -4,6 +4,12 @@ end
 
 class Array
   def hash
+    hash = nil
+    self.each_with_index do |el, idx|
+      el_hash = el.hash ^ idx.hash
+      hash = hash.nil? ? el_hash : (el.hash ^ hash ^ el_hash)
+    end
+    hash.hash
   end
 end
 
