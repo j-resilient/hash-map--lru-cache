@@ -12,7 +12,7 @@ end
 
 class String
   def hash
-    self.split("").map(&:ord).hash
+    split("").map(&:ord).hash
   end
 end
 
@@ -20,6 +20,6 @@ class Hash
   # This returns 0 because rspec will break if it returns nil
   # Make sure to implement an actual Hash#hash method
   def hash
-    self.sort.hash
+    sort.hash
   end
 end
