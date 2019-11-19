@@ -71,7 +71,7 @@ class ResizingIntSet
 
   def insert(num)
     unless include?(num)
-      resize! unless @count < @store.length
+      resize! unless @count < num_buckets
       self[num] << num 
       @count += 1
       return true
@@ -94,7 +94,7 @@ class ResizingIntSet
 
   def [](num)
     # optional but useful; return the bucket corresponding to `num`
-    @store[num % @store.length]
+    @store[num % num_buckets]
   end
 
   def num_buckets
