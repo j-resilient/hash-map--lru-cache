@@ -43,7 +43,7 @@ Improves on ResizingIntSet by hashing each item before storing it in a subarray,
 which means the elements are much less likely to cluster in any one subarray.
 Since ruby's native hashing returns an integer, HashSet can accept elements of any type.
 ## Phase 4: Linked List
-With the node class provided by the course, I implemented an enumerable doubly linked list.
+With the node class (sans Node#remove) provided by the course, I implemented an enumerable doubly linked list.
 ## Phase 5: Hash Map (reprise)
 ## Phase 6: LRU Cache
 
