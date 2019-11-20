@@ -1,26 +1,32 @@
 class Node
   attr_reader :key
   attr_accessor :val, :next, :prev
-
+  
   def initialize(key = nil, val = nil)
     @key = key
     @val = val
     @next = nil
     @prev = nil
   end
-
+  
   def to_s
     "#{@key}: #{@val}"
   end
-
+  
   def remove
     # optional but useful, connects previous link to next link
     # and removes self from list.
+    @prev.next = @next
+    @next.prev = @prev
   end
 end
 
 class LinkedList
+  include Enumerable
+
   def initialize
+    @head, @tail = Node.new, Node.new
+    @head.next, @tail.prev = @tail, @head
   end
 
   def [](i)
