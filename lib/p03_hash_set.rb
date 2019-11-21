@@ -19,8 +19,7 @@ class HashSet
   end
 
   def remove(key)
-    @count -= 1 if include?(key)
-    self[key].delete(key)
+    @count -= 1 if self[key].delete(key)
   end
 
   private
