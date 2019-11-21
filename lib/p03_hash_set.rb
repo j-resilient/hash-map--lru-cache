@@ -7,13 +7,11 @@ class HashSet
   end
 
   def insert(key)
-    unless include?(key)
-      resize! unless @count < num_buckets
-      self[key] << key
-      @count += 1
-      return true
-    end
-    false
+    return false if include?(key)
+    resize! unless @count < num_buckets
+    self[key] << key
+    @count += 1
+    true
   end
 
   def include?(key)
