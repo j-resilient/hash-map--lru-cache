@@ -45,6 +45,11 @@ Since ruby's native hashing returns an integer, HashSet can accept elements of a
 ## Phase 4: Linked List
 With the node class (sans Node#remove) provided by the course, I implemented an enumerable doubly linked list.
 ## Phase 5: Hash Map (reprise)
+A hash map implemented on top of a HashSet, where each key-pair is modded into a 
+'bucket' by hashing the key, and each 'bucket' is a linked list instead of a subarray.  
+Insert/Set: O(1)  
+Lookup/Get: O(1)  
+Delete: O(1)
 ## Phase 6: LRU Cache
 
 # ToDo
