@@ -35,10 +35,8 @@ class HashMap
   end
 
   def each
-    i = 0
-    while i < num_buckets
-      @store[i].each { |node| yield( [node.key, node.val] ) } unless @store[i].empty?
-      i += 1
+    @store.each do |bucket|
+      bucket.each { |node| yield( [node.key, node.val] ) } unless bucket.empty?
     end
   end
 
