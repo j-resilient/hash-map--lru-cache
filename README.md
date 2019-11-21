@@ -51,7 +51,7 @@ Insert/Set: O(1)
 Lookup/Get: O(1)  
 Delete: O(1)
 ## Phase 6: LRU Cache
-
+Built on a hashmap and a linked list where each element in the hashmap has a reference to a node in a hashmap.  
+ 
 # ToDo
--[] Remove all attraccessors and make note in README that they're necessary to pass 
-the tests
+-[] Find a good explanation of yield() and overriding #each 
