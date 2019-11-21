@@ -78,10 +78,3 @@ class HashMap
     @store[(key.hash % num_buckets)]
   end
 end
-
-# x = HashMap.new
-# x.set(:first, 1)
-# x.set(:second, 2)
-# x.set(:third, 3)
-# y = []
-# x.each { |k, v| print "#{v}\n"}
