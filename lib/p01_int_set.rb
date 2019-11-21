@@ -101,8 +101,6 @@ class ResizingIntSet
     old_store = @store
     @store = Array.new(@count * 2) { Array.new }
     @count = 0
-    old_store.each do |bucket|
-      bucket.each { |el| insert(el) }
-    end
+    old_store.flatten.each { |el| insert(el) }
   end
 end
