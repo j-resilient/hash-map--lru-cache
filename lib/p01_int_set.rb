@@ -71,13 +71,11 @@ class ResizingIntSet
   end
 
   def insert(num)
-    unless include?(num)
-      resize! unless @count < num_buckets
-      self[num] << num 
-      @count += 1
-      return true
-    end
-    false
+    return false if include?(num)
+    resize! unless @count < num_buckets
+    self[num] << num 
+    @count += 1
+    true
   end
 
   def remove(num)
