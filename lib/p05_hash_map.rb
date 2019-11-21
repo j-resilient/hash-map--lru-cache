@@ -15,11 +15,12 @@ class HashMap
   end
 
   def set(key, val)
+    resize! unless @count < num_buckets
     list = bucket(key)
+
     if list.include?(key)
       list.update(key, val)
     else
-      resize! unless @count < num_buckets
       list.append(key, val)
       @count += 1
     end
@@ -30,12 +31,7 @@ class HashMap
   end
 
   def delete(key)
-    if bucket(key).include?(key)
-      bucket(key).remove(key)
-      @count -= 1
-      return true
-    end
-    false
+    @count -= 1 if bucket(key).remove(key)
   end
 
   def each
