@@ -38,9 +38,7 @@ class HashMap
     false
   end
 
-  # require 'byebug'
   def each
-    # debugger
     i = 0
     while i < num_buckets
       @store[i].each { |node| yield( [node.key, node.val] ) } unless @store[i].empty?
