@@ -6,27 +6,28 @@ class MaxIntSet
   end
 
   def insert(num)
-    @store[num] = true if is_valid?(num)
+    validate!(num)
+    @store[num] = true
   end
 
   def remove(num)
-    @store[num] = false if is_valid?(num)
+    validate!(num)
+    @store[num] = false
   end
 
   def include?(num)
-    @store[num] if is_valid?(num)
+    validate!(num)
+    @store[num]
   end
 
   private
 
   def is_valid?(num)
-    valid = num >= 0 && num <= @max
-    validate!(num) unless valid
-    valid
+    num.between?(0, @max - 1)
   end
 
   def validate!(num)
-    raise "Out of bounds"
+    raise "Out of bounds" unless is_valid?(num)
   end
 end
 
