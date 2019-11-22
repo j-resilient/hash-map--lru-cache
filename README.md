@@ -52,6 +52,10 @@ Lookup/Get: O(1)
 Delete: O(1)
 ## Phase 6: LRU Cache
 Built on a hashmap and a linked list where each element in the hashmap has a reference to a node in a hashmap.  
- 
+Takes a key and a proc. Each value is then the result of putting each key through the 
+proc.  
+Insert/Set: O(1)  
+Lookup/Get: O(1)  
+Delete: O(1)
 # ToDo
 -[] Find a good explanation of yield() and overriding #each 
