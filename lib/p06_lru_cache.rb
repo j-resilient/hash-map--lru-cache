@@ -18,7 +18,7 @@ class LRUCache
       update_node!(@map[key])
     else
       eject! unless count < @max
-      calc!(key) unless @map.include?(key)
+      calc!(key)
     end
   end
 
