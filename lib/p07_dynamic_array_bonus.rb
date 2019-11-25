@@ -35,13 +35,18 @@ class DynamicArray
     @count = 0
   end
 
+  # defines the number of places an element CAN be stored in the array
+  # count is the number of places from 0 to the last index where an element is stored
+  # example: [nil, nil, 0, nil] @count == 3, capacity == 4
   def capacity
     @store.length
   end
   
   def [](i)
+    # handles negative indices
     i = count + i if i < 0
     return @store[i] if i >= 0 && i < capacity
+    # return nil instead of undefined if going outside array bounds
     nil
   end
   
@@ -58,7 +63,8 @@ class DynamicArray
       new_count = count + 1
     end
     # if you reset count before running #resize
-    # you get an out of bounds error
+    # you'll get an out of bounds error
+    # resize doubles the memory every time
     resize! until new_count <= capacity
     @count = new_count
     @store[i] = val
