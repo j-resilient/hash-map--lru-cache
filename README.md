@@ -57,5 +57,8 @@ proc.
 Insert/Set: O(1)  
 Lookup/Get: O(1)  
 Delete: O(1)
+## Phase 7: Dynamic Array (Bonus)  
+Given a static array class (meant to mimic C arrays), DynamicArray builds Ruby's
+array class from scratch.
 # ToDo
 -[] Find a good explanation of yield() and overriding #each 
