@@ -71,8 +71,7 @@ class DynamicArray
   end
 
   def include?(val)
-    each { |el| return true if el == val }
-    false
+    any? { |el| return true if el == val }
   end
 
   def push(val)
