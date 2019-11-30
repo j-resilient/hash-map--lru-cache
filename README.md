@@ -55,5 +55,3 @@ Built on a hashmap and a linked list where each element in the hashmap has a ref
 ## Phase 7: Dynamic Array (Bonus)  
 Given a static array class (meant to mimic C arrays), DynamicArray builds Ruby's
 array class from scratch.
-# ToDo
--[] Find a good explanation of yield() and overriding #each 
