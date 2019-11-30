@@ -71,8 +71,7 @@ class DynamicArray
   end
 
   def include?(val)
-    each { |el| return true if el == val }
-    false
+    any? { |el| return true if el == val }
   end
 
   def push(val)
@@ -129,12 +128,7 @@ class DynamicArray
   end
 
   def each
-    i = 0
-    while i < count
-      el = @store[i]
-      yield( el )
-      i += 1
-    end
+    count.times { |i| yield(@store[i]) }
     self
   end
 
@@ -148,13 +142,8 @@ class DynamicArray
   private
 
   def resize!
-    old_array = @store
-    @store = StaticArray.new(capacity * 2)
-    num_els = count
-    @count = 0
-    until count == num_els
-      @store[count] = old_array[count]
-      @count += 1
-    end
+    new_store = StaticArray.new(capacity * 2)
+    each_with_index { |el, idx| new_store[idx] = el }
+    @store = new_store
   end
 end
