@@ -128,12 +128,7 @@ class DynamicArray
   end
 
   def each
-    i = 0
-    while i < count
-      el = @store[i]
-      yield( el )
-      i += 1
-    end
+    count.times { |i| yield(@store[i]) }
     self
   end
 
